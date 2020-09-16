@@ -1,0 +1,45 @@
+public class Fox {
+	  //egenskaber
+	  String foxType;
+	  String foxColor;
+	  int foxHeight;
+	  
+	  // konstruktør
+	  Fox(String Type, String Color, int Height) {
+    foxType=Type;
+	    foxColor=Color;
+	    foxHeight=Height;
+	  }
+	  // adfærd
+	  public void showType() {
+	    System.out.println("Type: " + foxType);
+	  }
+	
+	  
+	    public static void main(String[] args) {
+	      // primitives
+	      int x=10;
+	      int y=5;
+	      // references
+	      //int[] arrayOfInts = new int[10];
+	      // cages
+	      Fox[] arrayOfFoxs = new Fox[5];
+	      //arrayOfInts[9]= 123;
+	      //arrayOfInts[2] = 321;
+	      Fox myFox = new Fox("Den røde ræv","Rød",4);
+	      Fox myFox2 = new Fox("Polarræv","Hvid",6);
+	      Fox myFox3 = new Fox("Moseræv","Sort",4);
+	      arrayOfFoxs[1]=myFox;
+	      arrayOfFoxs[4]=myFox2;
+	      arrayOfFoxs[3]=myFox3;
+	      myFox.showType();
+	      
+	      for(int i=0; i< arrayOfFoxs.length; i++){
+	       //vis rævens data
+	       if (arrayOfFoxs[i] != null){
+	         
+arrayOfFoxs[i].showType();
+	       }
+	      }
+	    }
+	}
